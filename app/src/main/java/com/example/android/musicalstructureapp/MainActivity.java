@@ -30,6 +30,9 @@ package com.example.android.musicalstructureapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,6 +41,45 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Create the ArrayList of Song Objects
+        ArrayList<Song> songs = new ArrayList<Song>();
+
+        songs.add(new Song(getString(R.string.song1), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song2), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song3), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song4), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song5), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song6), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song7), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song8), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song9), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song10), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song11), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song12), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song13), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song14), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song15), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song16), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song17), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song18), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song19), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song20), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song21), getString(R.string.artist_name), R.drawable.ic_play));
+        songs.add(new Song(getString(R.string.song22), getString(R.string.artist_name), R.drawable.ic_play));
+
+
+        /**
+         * Create an {@link SongAdapter}, whose data source is a list of
+         * {@link SongAdapter}s. The adapter knows how to create list item views for each item
+         * in the list.
+         */
+
+        SongAdapter songAdapter = new SongAdapter(this, songs);
+
+        // Get a reference to the ListView, and attach the adapter to the listView. 
+        ListView listView = (ListView) findViewById(R.id.list);
+
+        listView.setAdapter(songAdapter);
 
     }
 }

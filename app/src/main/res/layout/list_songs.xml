@@ -26,16 +26,47 @@
   ~           OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   -->
 
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_item_height"
+    android:background="@color/colorPrimaryDark"
+    android:minHeight="@dimen/list_item_height">
 
-<resources>
-    <!-- Primary color of the app (shown in the app bar) -->
-    <color name="colorPrimary">#3F51B5</color>
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"
+        android:src="@drawable/ic_play" />
 
-    <!-- Primary dark color of the app (shown in the status bar) -->
-    <color name="colorPrimaryDark">#303F9F</color>
+    <RelativeLayout
+        android:id="@+id/text_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/image"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:paddingLeft="16dp">
 
-    <color name="colorAccent">#FF4081</color>
+        <TextView
+            android:id="@+id/song_name"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textStyle="bold" />
 
-    <!-- Background color for app -->
-    <color name="tan_background">#FFF7DA</color>
-</resources>
+        <TextView
+            android:id="@+id/Artist_name"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_below="@id/song_name"
+            android:gravity="center_vertical"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@android:color/holo_orange_dark" />
+
+    </RelativeLayout>
+</RelativeLayout>

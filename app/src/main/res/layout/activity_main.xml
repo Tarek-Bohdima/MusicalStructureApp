@@ -26,22 +26,11 @@
   ~           LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
   ~           OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="com.example.android.musicalstructureapp.MainActivity" />
 
-    <TextView
-        android:id="@+id/music_library"
-        style="@style/CategoryStyle"
-        android:text="Music Library" />
-
-    <TextView
-        android:id="@+id/player"
-        style="@style/CategoryStyle"
-        android:text="Player" />
-
-
-</LinearLayout>

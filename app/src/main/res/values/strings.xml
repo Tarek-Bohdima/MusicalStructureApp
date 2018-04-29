@@ -28,4 +28,27 @@
 
 <resources>
     <string name="app_name">MusicalStructureApp</string>
+    <string name="song1"><![CDATA[Father & Son]]></string>
+    <string name="artist_name">Cat Stevens</string>
+    <string name="song2">Peace Train</string>
+    <string name="song3">Wild World</string>
+    <string name="song4">Moonshadow</string>
+    <string name="song5">Morning Has Broken</string>
+    <string name="song6">Lady D\'Arbanville</string>
+    <string name="song7">Where Do The Children Play</string>
+    <string name="song8">If You Want to Sing Out, Sing Out</string>
+    <string name="song9">I Think I See the Light</string>
+    <string name="song10">Heaven</string>
+    <string name="song11">A Bad Night</string>
+    <string name="song12">Lonely City</string>
+    <string name="song13">Oh Very Young</string>
+    <string name="song14">How Can I Tell You</string>
+    <string name="song15">The Wind</string>
+    <string name="song16">Midday</string>
+    <string name="song17">The Hurt</string>
+    <string name="song18">All Kinds of Roses</string>
+    <string name="song19">Miles From Nowhere</string>
+    <string name="song20">Katmandu</string>
+    <string name="song21">Sad Lisa</string>
+    <string name="song22">Maybe You\'re Right</string>
 </resources>
