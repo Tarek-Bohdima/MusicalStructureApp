@@ -53,7 +53,7 @@ public class SongAdapter extends ArrayAdapter<Song>{
      * to populate into the lists.
      *
      * @param context        The current context. Used to inflate the layout file.
-     * @param songs A List of AndroidFlavor objects to display in a list
+     * @param songs A List of Song objects to display in a list
      */
     public SongAdapter(Context context, ArrayList<Song> songs) {
 
