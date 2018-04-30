@@ -45,7 +45,6 @@ import java.util.ArrayList;
  * */
 public class SongAdapter extends ArrayAdapter<Song>{
 
-    private static final String LOG_TAG = SongAdapter.class.getSimpleName();
 
     /**
      * This is our own custom constructor (it doesn't mirror a superclass constructor).
