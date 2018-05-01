@@ -38,6 +38,7 @@ package com.example.android.musicalstructureapp;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -93,16 +94,16 @@ public class SongAdapter extends ArrayAdapter<Song>{
         // Get the {@link Song} object located at this position in the list
         Song currentSong = getItem(position);
 
-        // Find the TextView in the list_songs.xml layout with the ID song_name
-        TextView songNameView = (TextView)listSongView.findViewById(R.id.song_name);
-        // Get the song name from the current Song object and
-        // set this text on the name TextView
-        songNameView.setText(currentSong.getSongName());
+        // Find the TextView in the list_songs.xml layout with the ID song_title
+        TextView songTitleView = (TextView)listSongView.findViewById(R.id.song_title);
+        // Get the song title from the current Song object and
+        // set this text on the song title TextView
+        songTitleView.setText(currentSong.getsongTitle());
 
         // Find the TextView in the list_songs.xml layout with the ID Artist_name
         TextView ArtistNameView = (TextView)listSongView.findViewById(R.id.Artist_name);
         // Get the Artist name from the current Song object and
-        // set this text on the number TextView
+        // set this text on the Artist name TextView
         ArtistNameView.setText(currentSong.getArtistName());
 
         // Find the ImageView in the list_songs.xml layout with the ID image
@@ -111,11 +112,11 @@ public class SongAdapter extends ArrayAdapter<Song>{
         // set the image to iconView
         iconView.setImageResource(currentSong.getImageResourceId());
 
-        //manipulate the iconView from Play to Stop onClicking
+        //manipulate the iconView from Play to Stop when onClicked
         iconView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iconView.setImageResource(R.drawable.ic_stop);
+//                iconView.setImageResource(R.drawable.ic_stop);
             }
         });
 

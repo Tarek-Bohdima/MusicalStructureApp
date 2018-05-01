@@ -59,4 +59,7 @@
     <string name="song20">Katmandu</string>
     <string name="song21">Sad Lisa</string>
     <string name="song22">Maybe You\'re Right</string>
+    <string name="previous_track">Previous Track</string>
+    <string name="play">Play</string>
+    <string name="next_track">Next Track</string>
 </resources>

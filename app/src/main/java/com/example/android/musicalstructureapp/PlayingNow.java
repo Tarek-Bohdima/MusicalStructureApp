@@ -36,49 +36,14 @@
 
 package com.example.android.musicalstructureapp;
 
-public class Song {
-    //song title
-    private String msongTitle;
-    //artist name
-    private String mArtistName;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
-    // Drawable resource ID
-    private int mImageResourceId;
+public class PlayingNow extends AppCompatActivity {
 
-//    /** Constant value that represents no image was provided for this word */
-//    private static final int NO_IMAGE_PROVIDED = -1;
-
-    /**
-     * Create a new Word object.
-     *
-     * @param songTitle        is the string resource ID for the song
-     * @param ArtistName      is the string resource ID for the Artist name associated with the song
-     * @param imageResourceId is the drawable resource ID for the image for playing or stopping the song
-     */
-    public Song(String songTitle, String ArtistName, int imageResourceId) {
-        msongTitle = songTitle;
-        mArtistName = ArtistName;
-        mImageResourceId = imageResourceId;
-    }
-
-    /**
-     * Get the song title
-     */
-    public String getsongTitle() {
-        return msongTitle;
-    }
-
-    /**
-     * Get the artist name
-     */
-    public String getArtistName() {
-        return mArtistName;
-    }
-
-    /**
-     * Get the image resource ID
-     */
-    public int getImageResourceId() {
-        return mImageResourceId;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_playing_now);
     }
 }
