@@ -38,7 +38,7 @@ package com.example.android.musicalstructureapp;
 
 public class Song {
     //song title
-    private String msongTitle;
+    private String mSongTitle;
     //artist name
     private String mArtistName;
 
@@ -52,20 +52,20 @@ public class Song {
      * Create a new Word object.
      *
      * @param songTitle        is the string resource ID for the song
-     * @param ArtistName      is the string resource ID for the Artist name associated with the song
+     * @param artistName      is the string resource ID for the Artist name associated with the song
      * @param imageResourceId is the drawable resource ID for the image for playing or stopping the song
      */
-    public Song(String songTitle, String ArtistName, int imageResourceId) {
-        msongTitle = songTitle;
-        mArtistName = ArtistName;
+    public Song(String songTitle, String artistName, int imageResourceId) {
+        mSongTitle = songTitle;
+        mArtistName = artistName;
         mImageResourceId = imageResourceId;
     }
 
     /**
      * Get the song title
      */
-    public String getsongTitle() {
-        return msongTitle;
+    public String getSongTitle() {
+        return mSongTitle;
     }
 
     /**

@@ -36,11 +36,15 @@
 
 package com.example.android.musicalstructureapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+
 /**/
 public class MainActivity extends AppCompatActivity {
 
@@ -82,13 +86,33 @@ public class MainActivity extends AppCompatActivity {
          * in the list.
          */
 
-        SongAdapter songAdapter = new SongAdapter(this, songs);
+        final SongAdapter songAdapter = new SongAdapter(this, songs);
 
         // Get a reference to the ListView, and attach the adapter to the listView. 
         ListView listView = (ListView) findViewById(R.id.list);
 
         listView.setAdapter(songAdapter);
 
+        /*
+        sets onItemClickListener to send intent
+        carrying variables (song title and artist name) to the other Activity(PlayingNow)
+        */
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                String artist = songAdapter.getItem(position).getArtistName();
+                String song = songAdapter.getItem(position).getSongTitle();
+
+                Intent i = new Intent(MainActivity.this, PlayingNow.class);
+                i.putExtra("song", song);
+                i.putExtra("artist", artist);
+
+                startActivity(i);
+            }
+        });
+
     }
+
 
 }

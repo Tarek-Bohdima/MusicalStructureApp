@@ -38,7 +38,6 @@ package com.example.android.musicalstructureapp;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,7 +51,7 @@ import java.util.ArrayList;
  * {@link SongAdapter} is an {@link ArrayAdapter} that can provide the layout for each list
  * based on a data source, which is a list of {@link Song} objects.
  * */
-public class SongAdapter extends ArrayAdapter<Song>{
+public class SongAdapter extends ArrayAdapter<Song> {
 
 
     /**
@@ -60,8 +59,8 @@ public class SongAdapter extends ArrayAdapter<Song>{
      * The context is used to inflate the layout file, and the list is the data we want
      * to populate into the lists.
      *
-     * @param context        The current context. Used to inflate the layout file.
-     * @param songs A List of Song objects to display in a list
+     * @param context The current context. Used to inflate the layout file.
+     * @param songs   A List of Song objects to display in a list
      */
     public SongAdapter(Context context, ArrayList<Song> songs) {
 
@@ -69,39 +68,39 @@ public class SongAdapter extends ArrayAdapter<Song>{
         // the second argument is used when the ArrayAdapter is populating a single TextView.
         // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
         // going to use this second argument, so it can be any value. Here, we used 0.
-        super(context,0,songs);
+        super(context, 0, songs);
     }
 
     /**
      * Provides a view for an AdapterView (ListView, GridView, etc.)
      *
-     * @param position The position in the list of data that should be displayed in the
-     *                 list item view.
+     * @param position    The position in the list of data that should be displayed in the
+     *                    list item view.
      * @param convertView The recycled view to populate.
-     * @param parent The parent ViewGroup that is used for inflation.
+     * @param parent      The parent ViewGroup that is used for inflation.
      * @return The View for the position in the AdapterView.
      */
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Check if the existing view is being reused, otherwise inflate the view
-        View listSongView= convertView;
-        if (listSongView == null){
+        View listSongView = convertView;
+        if (listSongView == null) {
             listSongView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.list_songs,parent,false);
+                    R.layout.list_songs, parent, false);
         }
 
         // Get the {@link Song} object located at this position in the list
         Song currentSong = getItem(position);
 
         // Find the TextView in the list_songs.xml layout with the ID song_title
-        TextView songTitleView = (TextView)listSongView.findViewById(R.id.song_title);
+        TextView songTitleView = (TextView) listSongView.findViewById(R.id.song_title);
         // Get the song title from the current Song object and
         // set this text on the song title TextView
-        songTitleView.setText(currentSong.getsongTitle());
+        songTitleView.setText(currentSong.getSongTitle());
 
         // Find the TextView in the list_songs.xml layout with the ID Artist_name
-        TextView ArtistNameView = (TextView)listSongView.findViewById(R.id.Artist_name);
+        TextView ArtistNameView = (TextView) listSongView.findViewById(R.id.Artist_name);
         // Get the Artist name from the current Song object and
         // set this text on the Artist name TextView
         ArtistNameView.setText(currentSong.getArtistName());
@@ -112,13 +111,6 @@ public class SongAdapter extends ArrayAdapter<Song>{
         // set the image to iconView
         iconView.setImageResource(currentSong.getImageResourceId());
 
-        //manipulate the iconView from Play to Stop when onClicked
-        iconView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                iconView.setImageResource(R.drawable.ic_stop);
-            }
-        });
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView

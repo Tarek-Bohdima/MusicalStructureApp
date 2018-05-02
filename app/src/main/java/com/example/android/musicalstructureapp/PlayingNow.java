@@ -36,8 +36,9 @@
 
 package com.example.android.musicalstructureapp;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 public class PlayingNow extends AppCompatActivity {
 
@@ -45,5 +46,18 @@ public class PlayingNow extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playing_now);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            String song = extras.getString("song");
+            String artist = extras.getString("artist");
+            //The key argument here must match that used in the other activity
+
+            TextView textView = (TextView) findViewById(R.id.action_song_title);
+            textView.setText(song);
+
+            TextView textView1 = (TextView) findViewById(R.id.action_artist_name);
+            textView1.setText(artist);
+        }
     }
 }
