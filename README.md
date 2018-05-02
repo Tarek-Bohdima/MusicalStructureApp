@@ -1,2 +1,2 @@
 # MusicalStructureApp
-<img src="snapshots/snapshot.png" width="300">
+<img src="screenshots/screenshot01.png" width="300">
