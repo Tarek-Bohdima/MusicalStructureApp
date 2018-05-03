@@ -45,11 +45,9 @@ public class Song {
     // Drawable resource ID
     private int mImageResourceId;
 
-//    /** Constant value that represents no image was provided for this word */
-//    private static final int NO_IMAGE_PROVIDED = -1;
 
     /**
-     * Create a new Word object.
+     * Create a new Song object.
      *
      * @param songTitle        is the string resource ID for the song
      * @param artistName      is the string resource ID for the Artist name associated with the song
