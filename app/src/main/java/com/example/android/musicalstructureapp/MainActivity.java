@@ -103,10 +103,12 @@ public class MainActivity extends AppCompatActivity {
 
                 String artist = songAdapter.getItem(position).getArtistName();
                 String song = songAdapter.getItem(position).getSongTitle();
+                int imageResourceId = songAdapter.getItem(position).getImageResourceId();
 
                 Intent i = new Intent(MainActivity.this, PlayingNow.class);
                 i.putExtra("song", song);
                 i.putExtra("artist", artist);
+                i.putExtra("imageResourceId",imageResourceId);
 
                 startActivity(i);
             }

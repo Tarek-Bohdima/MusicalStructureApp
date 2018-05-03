@@ -58,12 +58,12 @@
         android:layout_toRightOf="@id/image"
         android:background="@color/colorPrimaryDark"
         android:orientation="vertical"
-        android:paddingLeft="16dp">
+        android:paddingLeft="@dimen/activity_horizontal_margin">
 
         <TextView
             android:id="@+id/song_title"
             android:layout_width="match_parent"
-            android:layout_height="44dp"
+            android:layout_height="@dimen/textview_height"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@android:color/holo_orange_dark"
@@ -72,7 +72,7 @@
         <TextView
             android:id="@+id/Artist_name"
             android:layout_width="match_parent"
-            android:layout_height="44dp"
+            android:layout_height="@dimen/textview_height"
             android:layout_below="@id/song_title"
             android:gravity="top"
             android:textAppearance="?android:textAppearanceSmall"
